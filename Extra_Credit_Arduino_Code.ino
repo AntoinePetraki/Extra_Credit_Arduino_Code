@@ -47,7 +47,7 @@ void setup() {
   // calibrate for the first five seconds after program runs
   while (millis() < 5000) {
     // record the maximum sensor value
-    sensorValue = analogRead(A0);
+    sensorValue = analogRead(A5);
     if (sensorValue > sensorHigh) {
       sensorHigh = sensorValue;
     }
@@ -62,7 +62,7 @@ void setup() {
 
 void loop() {
   // read the input from A0 and store it in a variable
-  sensorValue = analogRead(A1);
+  sensorValue = analogRead(A5);
 
   // map the sensor values to a wide range of pitches
   int pitch = map(sensorValue, sensorLow, sensorHigh, 50, 4000);
